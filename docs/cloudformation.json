@@ -1,0 +1,28 @@
+{
+    "AWSTemplateFormatVersion" : "2010-09-09",
+    "Description" : "Nordcloud-Dataprovider-Variable",
+  
+    "Parameters" : {
+      "MyValue": {
+        "Description": "MyVar Content", 
+        "Type": "String",
+        "Default": "HelloWorld"
+      }
+    },
+  
+    "Resources" : {
+      "MyVar" : {
+        "Type" : "Nordcloud::Dataprovider::Variable",
+        "Metadata": {
+          "Content": { "Ref": "MyValue" }
+        }
+      }
+    },
+    
+    "Outputs": {
+      "Output": {
+        "Description": "Content of MyVar",
+        "Value": { "Fn::GetAtt" : [ "MyVar", "Content" ] }
+      }
+    }
+}

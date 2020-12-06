@@ -1,0 +1,16 @@
+{
+    "typeName": "Nordcloud::Dataprovider::Variable",
+    "language": "python37",
+    "runtime": "python3.7",
+    "entrypoint": "nordcloud_dataprovider_variable.handlers.resource",
+    "testEntrypoint": "nordcloud_dataprovider_variable.handlers.test_entrypoint",
+    "settings": {
+        "version": false,
+        "subparser_name": null,
+        "verbose": 0,
+        "force": false,
+        "type_name": null,
+        "use_docker": true,
+        "protocolVersion": "2.0.0"
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "typeName": "Nordcloud::Dataprovider::Variable",
+    "description": "An example resource schema demonstrating some basic constructs and validation rules.",
+    "sourceUrl": "https://github.com/aws-cloudformation/aws-cloudformation-rpdk.git",
+    "properties": {
+        "ID": {
+            "description": "ID is automatically generated on creation as unique identifier for the resource.",
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+$"
+        },
+        "Content": {
+            "description": "Variable content",
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 250
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+    ],
+    "readOnlyProperties": [
+        "/properties/ID",
+        "/properties/Content"
+    ],
+    "primaryIdentifier": [
+        "/properties/ID"
+    ],
+    "handlers": {
+        "create": {
+            "permissions": [
+            ]
+        },
+        "read": {
+            "permissions": [
+                "cloudformation:DescribeStackResource"
+            ]
+        },
+        "update": {
+            "permissions": [
+            ]
+        },
+        "delete": {
+            "permissions": [
+            ]
+        }
+    }
+}
